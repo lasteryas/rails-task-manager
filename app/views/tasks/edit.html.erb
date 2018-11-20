@@ -1,0 +1,17 @@
+<%= form_for @task do |f| %>
+  <%= f.label :title, "Enter a title" %>
+  <%= f.text_field :title %>
+
+  <%= f.label :details, "Give details" %>
+  <%= f.text_field :details %>
+
+  <%= f.submit %>
+<% end %>
+
+<form action="/task" method="patch">
+
+  <input type="text" name="task [title]" value="Gardening">
+  <input type="text" name="task [details]" value="Taking care of the roses">
+
+  <input type="submit" value="Create Task">
+</form>
